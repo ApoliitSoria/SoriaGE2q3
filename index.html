@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var a = parseFloat(prompt("Enter side 1"));
+        var b = parseFloat(prompt("Enter side 2"));
+        var c = parseFloat(prompt("Enter side 3"));
+        
+        typeoftriangle(a, b, c);
+
+        function typeoftriangle(a, b, c) {
+            if (isNaN(a) || isNaN(b) || isNaN(c)) {
+                window.alert("Invalid numbers, please try again");
+            } else if (a === b && b === c) {
+                window.alert("Triangle is Equilateral");
+            } else if (a === b || b === c || a === c) {
+                window.alert("Triangle is Isosceles");
+            } else {
+                window.alert("Triangle is Scalene");
+            }
+        }
+    </script>
+</body>
+</html>
